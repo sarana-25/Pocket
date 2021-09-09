@@ -19,7 +19,7 @@ def switch(argument,ll):
             ll.display()
             Main_menu()
         elif(argument==3):
-            ll.insert_at_beggining()
+            ll.insert_at_beggining(data=input("Enter your data:"))
             Main_menu()
         elif(argument==4):
             ll.insert_at_middle()
@@ -89,8 +89,8 @@ class Linked_List:
         return count
 
 
-    def insert_at_beggining(self):
-        data=input("Enter your data:")
+    def insert_at_beggining(self,data):
+        
         node=Node(data,self.head)
         self.head=node
 
@@ -102,7 +102,7 @@ class Linked_List:
         else:
             data=input("Enter your data:")
             if pos==0:
-                self.insert_at_beggining()
+                self.insert_at_beggining(data)
                 return
             else:
                 count=0
